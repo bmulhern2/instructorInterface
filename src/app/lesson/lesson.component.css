@@ -6,4 +6,11 @@ mat-list {
     padding: 0;
 } mat-card {
     text-align: center;
+} img {
+    height: 15%;
+    width: 35%;
+    float: left;
+    margin-top: 20%;
+} mat-card-title {
+    margin-right: 25%;
 }
