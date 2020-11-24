@@ -1,0 +1,74 @@
+<mat-card>
+    <mat-card-title>
+        <h1>Admin</h1>
+    </mat-card-title>
+    <mat-card-content>
+        <a routerLink="/">Instructor</a>
+    </mat-card-content>
+</mat-card>
+<mat-card>
+    <mat-card-title>
+        <h3>Create Lesson</h3>
+    </mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="adminForm" (ngSubmit)="submit()">
+            <mat-card-content>
+                <mat-label>Level</mat-label>
+                <br>
+                <input matInput placeholder="Ex. Beginner" formControlName="level" required>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-label>Warm Up</mat-label>
+                <br>
+                <input matInput placeholder="Short Description" formControlName="warmUp" required>
+                <br>
+                <input matInput placeholder="Long Description" formControlName="warmUpDescription" required>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-label>Stretch</mat-label>
+                <br>
+                <input matInput placeholder="Short Description" formControlName="stretch" required>
+                <br>
+                <input matInput placeholder="Long Description" formControlName="stretchDescription" required>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-label>Kicks</mat-label>
+                <br>
+                <input matInput placeholder="Short Description" formControlName="kicks" required>
+                <br>
+                <input matInput placeholder="Long Description" formControlName="kicksDescription" required>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-label>Strikes</mat-label>
+                <br>
+                <input matInput placeholder="Short Description" formControlName="strikes" required>
+                <br>
+                <input matInput placeholder="Long Description" formControlName="strikesDescription" required>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-label>Blocks</mat-label>
+                <br>
+                <input matInput placeholder="Short Description" formControlName="blocks" required>
+                <br>
+                <input matInput placeholder="Long Description" formControlName="blocksDescription" required>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-label>Combos</mat-label>
+                <br>
+                <input matInput placeholder="Short Description" formControlName="combos" required>
+                <br>
+                <input matInput placeholder="Long Description" formControlName="combosDescription" required>
+            </mat-card-content>
+            <mat-card-content>
+                <mat-label>Form</mat-label>
+                <br>
+                <input matInput placeholder="Short Description" formControlName="form" required>
+                <br>
+                <input matInput placeholder="Long Description" formControlName="formDescription" required>
+            </mat-card-content>
+            <mat-card-actions>
+                <button type="submit">Add New Lesson</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

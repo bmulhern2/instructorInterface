@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>
+        <h1>Instructor</h1>
+    </mat-card-title>
+    <mat-card-content>
+        <a routerLink="/admin">Admin</a>
+    </mat-card-content>
+</mat-card>
+<div fxLayout="row" fxLayoutAlign="space-between">
+<mat-list *ngFor="let lesson of lessons">
+            <mat-list-item><a [routerLink]="['/', lesson._id]">Lesson</a></mat-list-item>
+            <mat-list-item>Warm Up: {{ lesson.warmUp }}</mat-list-item>
+            <mat-list-item>Stretch: {{ lesson.stretch }}</mat-list-item>
+            <mat-list-item>Kicks: {{ lesson.kicks }}</mat-list-item>
+            <mat-list-item>Strikes: {{ lesson.strikes }}</mat-list-item>
+            <mat-list-item>Blocks: {{ lesson.blocks }}</mat-list-item>
+            <mat-list-item>Combos: {{ lesson.combos }}</mat-list-item>
+            <mat-list-item>Form: {{ lesson.form }}</mat-list-item>
+</mat-list>
+</div>

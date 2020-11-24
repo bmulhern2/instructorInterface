@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>
+        <h1>Lesson</h1>
+    </mat-card-title>
+    <mat-card-content>
+        <a routerLink="/">Lessons</a>
+    </mat-card-content>
+</mat-card>
+<mat-card>
+    <mat-card-content>
+ <mat-list>
+ <mat-list-item>Lesson</mat-list-item>   
+ <mat-list-item>Level: {{ lesson.level }}</mat-list-item> 
+ <mat-list-item>Warm Up: {{ lesson.warmUpDescription }}</mat-list-item>
+ <mat-list-item>Stretch: {{ lesson.stretchDescription }}</mat-list-item>
+ <mat-list-item>Kicks: {{ lesson.kicksDescription }}</mat-list-item>
+ <mat-list-item>Strikes: {{ lesson.strikesDescription }}</mat-list-item>
+ <mat-list-item>Blocks: {{ lesson.blocksDescription }}</mat-list-item>
+ <mat-list-item>Combos: {{ lesson.combosDescription }}</mat-list-item>
+ <mat-list-item>Form: {{ lesson.formDescription }}</mat-list-item>
+ </mat-list>
+</mat-card-content>
+</mat-card>

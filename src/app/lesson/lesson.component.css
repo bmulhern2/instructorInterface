@@ -1,0 +1,9 @@
+mat-list {
+    list-style-type: none;
+    text-align: center;
+} * {
+    margin: 0;
+    padding: 0;
+} mat-card {
+    text-align: center;
+}

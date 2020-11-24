@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+} mat-card {
+    text-align: center;
+} input {
+    text-align: center;
+    width: 25%;
+}

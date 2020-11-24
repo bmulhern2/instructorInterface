@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+} mat-card {
+    text-align: center;
+} table {
+    text-align: center;
+} ul {
+    text-align: center;
+    list-style-type: none;
+} li {
+    text-align: center;
+} * {
+    margin: 0;
+    padding: 0;
+}
