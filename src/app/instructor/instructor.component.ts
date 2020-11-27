@@ -1,7 +1,9 @@
 /*
 
-To Do:
-CSS
+Implement:
+Match Lesson View To Prototype
+Match Individual Lesson View With Protot
+Admin Actions
 
 Reference
 Stack: https://stackoverflow.com/questions/38062702/how-to-pass-a-parameter-to-routerlink-that-is-somewhere-inside-the-url
@@ -13,7 +15,6 @@ import { ServiceService } from '../service.service'
 import { lesson } from '../lesson.interface'
 import { Router } from '@angular/router'
 import { CookieService } from 'ngx-cookie-service' 
-
 @Component({
   selector: 'app-instructor',
   templateUrl: './instructor.component.html',
@@ -21,11 +22,31 @@ import { CookieService } from 'ngx-cookie-service'
 })
 export class InstructorComponent implements OnInit {
   lessons: lesson[]
-  constructor(private router: Router, private cookieService: CookieService, private service: ServiceService) { }
+  basic: lesson[]
+  bbt1: lesson[]
+  bbt2: lesson[]
+  bbt3: lesson[]
+  constructor(private service: ServiceService) { }
   ngOnInit() {
-    this.service.getAll().subscribe(res => {
-      this.lessons = res
-      console.log(this.lessons)
+  // Get Basic
+  this.service.getByLevel("Basic").subscribe(lessons => {
+    this.basic = lessons
+    console.log(this.basic)
+  })
+  // Get BBT 1
+  this.service.getByLevel("BBT 1").subscribe(lessons => {
+    this.bbt1 = lessons
+    console.log(this.bbt1)
     })
+  // Get BBT 2
+  this.service.getByLevel("BBT 2").subscribe(lessons => {
+    this.bbt2 = lessons
+    console.log(this.bbt2)
+  })
+  // Get BBT 3
+  this.service.getByLevel("BBT 3").subscribe(lessons => {
+    this.bbt3 = lessons
+    console.log(this.bbt3)
+  })
   }
 }

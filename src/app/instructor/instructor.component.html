@@ -9,15 +9,71 @@
         <a routerLink="/admin">Admin</a>
     </mat-card-content>
 </mat-card>
-<div fxLayout="row" fxLayoutAlign="space-between">
-<mat-list *ngFor="let lesson of lessons">
-            <mat-list-item><a [routerLink]="['/', lesson._id]">Lesson</a></mat-list-item>
-            <mat-list-item>Warm Up: {{ lesson.warmUp }}</mat-list-item>
-            <mat-list-item>Stretch: {{ lesson.stretch }}</mat-list-item>
-            <mat-list-item>Kicks: {{ lesson.kicks }}</mat-list-item>
-            <mat-list-item>Strikes: {{ lesson.strikes }}</mat-list-item>
-            <mat-list-item>Blocks: {{ lesson.blocks }}</mat-list-item>
-            <mat-list-item>Combos: {{ lesson.combos }}</mat-list-item>
-            <mat-list-item>Form: {{ lesson.form }}</mat-list-item>
-</mat-list>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <mat-list *ngFor="let lesson of basic">
+            <hr>
+            <mat-list-item><a [routerLink]="['/', lesson._id]">View Lesson</a></mat-list-item>
+            <mat-list-item>Level: {{ lesson.level }}</mat-list-item>
+            <mat-list-item>Warm Up: {{ lesson.warmUpDescription }}</mat-list-item>
+            <mat-list-item>Stretch: {{ lesson.stretchDescription }}</mat-list-item>
+            <mat-list-item>Kicks: {{ lesson.kicksDescription }}</mat-list-item>
+            <mat-list-item>Strikes: {{ lesson.strikesDescription }}</mat-list-item>
+            <mat-list-item>Blocks: {{ lesson.blocksDescription }}</mat-list-item>
+            <mat-list-item>Combos: {{ lesson.combosDescription }}</mat-list-item>
+            <mat-list-item>Form {{ lesson.formDescription }}</mat-list-item>
+            <hr>
+        </mat-list>
+    </div>
+</div>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <mat-list *ngFor="let lesson of bbt1">
+            <hr>
+            <mat-list-item><a [routerLink]="['/', lesson._id]">View Lesson</a></mat-list-item>
+            <mat-list-item>Level: {{ lesson.level }}</mat-list-item>
+            <mat-list-item>Warm Up: {{ lesson.warmUpDescription }}</mat-list-item>
+            <mat-list-item>Stretch: {{ lesson.stretchDescription }}</mat-list-item>
+            <mat-list-item>Kicks: {{ lesson.kicksDescription }}</mat-list-item>
+            <mat-list-item>Strikes: {{ lesson.strikesDescription }}</mat-list-item>
+            <mat-list-item>Blocks: {{ lesson.blocksDescription }}</mat-list-item>
+            <mat-list-item>Combos: {{ lesson.combosDescription }}</mat-list-item>
+            <mat-list-item>Form {{ lesson.formDescription }}</mat-list-item>
+            <hr>
+        </mat-list>
+    </div>
+</div>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <mat-list *ngFor="let lesson of bbt2">
+            <hr>
+            <mat-list-item><a [routerLink]="['/', lesson._id]">View Lesson</a></mat-list-item>
+            <mat-list-item>Level: {{ lesson.level }}</mat-list-item>
+            <mat-list-item>Warm Up: {{ lesson.warmUpDescription }}</mat-list-item>
+            <mat-list-item>Stretch: {{ lesson.stretchDescription }}</mat-list-item>
+            <mat-list-item>Kicks: {{ lesson.kicksDescription }}</mat-list-item>
+            <mat-list-item>Strikes: {{ lesson.strikesDescription }}</mat-list-item>
+            <mat-list-item>Blocks: {{ lesson.blocksDescription }}</mat-list-item>
+            <mat-list-item>Combos: {{ lesson.combosDescription }}</mat-list-item>
+            <mat-list-item>Form {{ lesson.formDescription }}</mat-list-item>
+            <hr>
+        </mat-list>
+    </div>
+</div>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <mat-list *ngFor="let lesson of bbt3">
+            <hr>
+            <mat-list-item><a [routerLink]="['/', lesson._id]">View Lesson</a></mat-list-item>
+            <mat-list-item>Level: {{ lesson.level }}</mat-list-item>
+            <mat-list-item>Warm Up: {{ lesson.warmUpDescription }}</mat-list-item>
+            <mat-list-item>Stretch: {{ lesson.stretchDescription }}</mat-list-item>
+            <mat-list-item>Kicks: {{ lesson.kicksDescription }}</mat-list-item>
+            <mat-list-item>Strikes: {{ lesson.strikesDescription }}</mat-list-item>
+            <mat-list-item>Blocks: {{ lesson.blocksDescription }}</mat-list-item>
+            <mat-list-item>Combos: {{ lesson.combosDescription }}</mat-list-item>
+            <mat-list-item>Form {{ lesson.formDescription }}</mat-list-item>
+            <hr>
+        </mat-list>
+    </div>
 </div>

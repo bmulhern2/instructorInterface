@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms'
 import { ServiceService } from '../service.service'
 import { Router } from '@angular/router'
+import { level } from '../level.interface'
 
 @Component({
   selector: 'app-admin',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router'
 })
 export class AdminComponent implements OnInit {
   adminForm: FormGroup
+  levels: level[]
   constructor(private router: Router, private fb: FormBuilder, private service: ServiceService) { 
     this.adminForm = this.fb.group({
       level: new FormControl(null, Validators.required),
@@ -30,10 +32,15 @@ export class AdminComponent implements OnInit {
     })
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.service.getLevels().subscribe(levels => {
+      this.levels = levels
+      console.log(this.levels)
+    })
+  }
   submit() {
    let newLesson = {
-     level: this.adminForm.get('level').value,
+     level: this.adminForm.controls.level.value,
      warmUp: this.adminForm.get('warmUp').value,
      warmUpDescription: this.adminForm.get('warmUpDescription').value,
      stretch: this.adminForm.get('stretch').value,

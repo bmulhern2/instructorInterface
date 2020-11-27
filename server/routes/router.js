@@ -12,6 +12,9 @@ let router = express.Router()
 // Imports Lesson Model
 let Lesson = require('../models/lesson')
 
+// Imports Level
+let levels = require('../models/level')
+
 // Body Parser Middleware
 router.use(bodyParser.json())
 router.use(bodyParser.urlencoded({ extended: true }))
@@ -23,6 +26,26 @@ router.get('/', function(req, res) {
             res.json(err)
         } else {
             res.json(lesson)
+        }
+    })
+})
+// FindByLevel Route
+router.get('/lesson/:level', function(req, res) {
+    Lesson.find({ "level": req.params.level }, function(err, lessons) {
+        if (err) {
+            res.json(err)
+        } else {
+            res.json(lessons)
+        }
+    })
+})
+// Get Levels Route
+router.get('/levels', function(req, res) {
+    levels.find({}, function(err, levels) {
+        if (err) {
+            res.json(err)
+        } else {
+            res.json(levels)
         }
     })
 })

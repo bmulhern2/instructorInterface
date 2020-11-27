@@ -18,7 +18,9 @@
             <mat-card-content>
                 <mat-label>Level</mat-label>
                 <br>
-                <input matInput placeholder="Ex. Beginner" formControlName="level" required>
+                <mat-select  [formControl]="adminForm.controls['level']">
+                    <mat-option *ngFor="let level of levels" [value]="level.level">{{ level.level }}</mat-option>
+                </mat-select>
             </mat-card-content>
             <mat-card-content>
                 <mat-label>Warm Up</mat-label>

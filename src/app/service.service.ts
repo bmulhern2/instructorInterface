@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { lesson } from '../app/lesson.interface';
 import { Observable } from 'rxjs'
 import { CookieService }  from 'ngx-cookie-service'
-
+import { level } from './level.interface'
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +12,12 @@ export class ServiceService {
   constructor(private cookieService: CookieService, private http: HttpClient) { }
   getAll(): Observable<lesson[]> {
     return this.http.get<lesson[]>('/api')
+  }
+  getByLevel(level): Observable<lesson[]> {
+    return this.http.get<lesson[]>('/api/lesson/' + level)
+  }
+  getLevels(): Observable<level[]> {
+    return this.http.get<level[]>('/api/levels')
   }
   getOne(id): Observable<lesson> {
     return this.http.get<lesson>('/api/' + id)

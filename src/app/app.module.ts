@@ -21,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 
 import { CookieService } from 'ngx-cookie-service'
 
+import { MatSelectModule } from '@angular/material/select'
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { CookieService } from 'ngx-cookie-service'
     MatFormFieldModule,
     HttpClientModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSelectModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
