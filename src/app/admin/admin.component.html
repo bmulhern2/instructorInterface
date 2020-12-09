@@ -1,15 +1,4 @@
 <mat-card>
-    <mat-card-content>
-        <a routerLink="/"><img mat-card-image src="../../assets/villarisimage.png"></a>
-    </mat-card-content>
-    <mat-card-title>
-        <h1>Admin</h1>
-    </mat-card-title>
-    <mat-card-content id="link">
-        <a routerLink="/">Instructor</a>
-    </mat-card-content>
-</mat-card>
-<mat-card>
     <mat-card-title>
         <h3>Create Lesson</h3>
     </mat-card-title>
@@ -21,6 +10,9 @@
                 <mat-select  [formControl]="adminForm.controls['level']">
                     <mat-option *ngFor="let level of levels" [value]="level.level">{{ level.level }}</mat-option>
                 </mat-select>
+            </mat-card-content>
+            <mat-card-content>
+                <input type="Number" placeholder="Session Number" formControlName="sessionNumber">
             </mat-card-content>
             <mat-card-content>
                 <mat-label>Warm Up</mat-label>

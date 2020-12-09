@@ -1,4 +1,5 @@
 export interface lesson {
+    sessionNumber: number;
     level: string;
     warmUp: string;
     warmUpDescription: string;

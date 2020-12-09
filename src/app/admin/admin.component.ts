@@ -14,6 +14,7 @@ export class AdminComponent implements OnInit {
   levels: level[]
   constructor(private router: Router, private fb: FormBuilder, private service: ServiceService) { 
     this.adminForm = this.fb.group({
+      sessionNumber: new FormControl(null, Validators.required),
       level: new FormControl(null, Validators.required),
       warmUp: new FormControl(null, Validators.required),
       warmUpDescription: new FormControl(null, Validators.required),
@@ -40,6 +41,7 @@ export class AdminComponent implements OnInit {
   }
   submit() {
    let newLesson = {
+     sessionNumber: this.adminForm.get('sessionNumber').value,
      level: this.adminForm.controls.level.value,
      warmUp: this.adminForm.get('warmUp').value,
      warmUpDescription: this.adminForm.get('warmUpDescription').value,
