@@ -1,15 +1,38 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 8px;
 } img {
-    height: 25%;
-    width: 45%;
+    height: 45%;
+    width: 85%;
     margin-left: 20%;
-} mat-list-item {
-    margin-top: -55% !important; 
-    text-align: center !important;
-    font-size: 8px !important;
+    margin-top: 20%;
+} ul {
+    list-style-type: none;
+    margin-top: 4%;
+    font-size: 12px;
+    margin-left: 4%;
+    border-style: solid;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
 } #first {
-    margin-top: 10%;
+    margin-top: 2.45%;
+} .basic {
+    background-color: yellow;
+} .bbt1 {
+    background-color: lightblue;
+} .bbt2 {
+    background-color: lightgreen;
+} .bbt3 {
+    background-color: brown;
+} .header, a {
+    background-color: black;
+    color: white;
+} a {
+    text-decoration: none;
+} img {
+    margin-top: 40px;
+} .admin {
+    background-color: white !important;
+    margin-left: 20%;
 }

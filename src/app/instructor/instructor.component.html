@@ -1,97 +1,97 @@
 <div id="first" fxLayout="column" fxLayoutAlign="space-between">
     <div fxLayout="row" fxLayoutAlign="start">
-        <mat-list>
-            <mat-list-item>Basic</mat-list-item>
-            <mat-list-item>Warm Up</mat-list-item>
-            <mat-list-item>Stretch</mat-list-item>
-            <mat-list-item>Kicks</mat-list-item>
-            <mat-list-item>Strikes</mat-list-item>
-            <mat-list-item>Blocks</mat-list-item>
-            <mat-list-item>Combos</mat-list-item>
-            <mat-list-item>Form</mat-list-item>
-        </mat-list>
-        <mat-list *ngFor="let lesson of basic">
-            <mat-list-item><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></mat-list-item>
-            <mat-list-item>{{ lesson.warmUp }}</mat-list-item>
-            <mat-list-item>{{ lesson.stretch }}</mat-list-item>
-            <mat-list-item>{{ lesson.kicks }}</mat-list-item>
-            <mat-list-item>{{ lesson.strikes }}</mat-list-item>
-            <mat-list-item>{{ lesson.blocks }}</mat-list-item>
-            <mat-list-item>{{ lesson.combos }}</mat-list-item>
-            <mat-list-item>{{ lesson.form }}</mat-list-item>
-        </mat-list>
-        <img mat-card-image src="../../assets/villarisimage.png">
+        <ul class="basic">
+            <li class="header">Basic</li>
+            <li>Warm Up</li>
+            <li>Stretch</li>
+            <li>Kicks</li>
+            <li>Strikes</li>
+            <li>Blocks</li>
+            <li>Combos</li>
+            <li>Form</li>
+        </ul>
+        <ul class="basic" *ngFor="let lesson of basic">
+            <li class="header"><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></li>
+            <li>{{ lesson.warmUp }}</li>
+            <li>{{ lesson.stretch }}</li>
+            <li>{{ lesson.kicks }}</li>
+            <li>{{ lesson.strikes }}</li>
+            <li>{{ lesson.blocks }}</li>
+            <li>{{ lesson.combos }}</li>
+            <li>{{ lesson.form }}</li>
+        </ul>
+        <a class="admin" routerLink="/admin"><img mat-card-image src="../../assets/villarisimage.png"></a>
     </div>
 </div>
 <div fxLayout="column" fxLayoutAlign="space-between">
     <div fxLayout="row" fxLayoutAlign="start start">
-        <mat-list>
-            <mat-list-item>BBT 1</mat-list-item>
-            <mat-list-item>Warm Up</mat-list-item>
-            <mat-list-item>Stretch</mat-list-item>
-            <mat-list-item>Kicks</mat-list-item>
-            <mat-list-item>Strikes</mat-list-item>
-            <mat-list-item>Blocks</mat-list-item>
-            <mat-list-item>Combos</mat-list-item>
-            <mat-list-item>Form</mat-list-item>
-        </mat-list>
-        <mat-list *ngFor="let lesson of bbt1">
-            <mat-list-item><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></mat-list-item>
-            <mat-list-item>{{ lesson.warmUp }}</mat-list-item>
-            <mat-list-item>{{ lesson.stretch }}</mat-list-item>
-            <mat-list-item>{{ lesson.kicks }}</mat-list-item>
-            <mat-list-item>{{ lesson.strikes }}</mat-list-item>
-            <mat-list-item>{{ lesson.blocks }}</mat-list-item>
-            <mat-list-item>{{ lesson.combos }}</mat-list-item>
-            <mat-list-item>{{ lesson.form }}</mat-list-item>
-        </mat-list>
+        <ul class="bbt1">
+            <li class="header">BBT 1</li>
+            <li>Warm Up</li>
+            <li>Stretch</li>
+            <li>Kicks</li>
+            <li>Strikes</li>
+            <li>Blocks</li>
+            <li>Combos</li>
+            <li>Form</li>
+        </ul>
+        <ul class="bbt1" *ngFor="let lesson of bbt1">
+            <li class="header"><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></li>
+            <li>{{ lesson.warmUp }}</li>
+            <li>{{ lesson.stretch }}</li>
+            <li>{{ lesson.kicks }}</li>
+            <li>{{ lesson.strikes }}</li>
+            <li>{{ lesson.blocks }}</li>
+            <li>{{ lesson.combos }}</li>
+            <li>{{ lesson.form }}</li>
+        </ul>
     </div>
 </div>
 <div fxLayout="column" fxLayoutAlign="space-between">
     <div fxLayout="row" fxLayoutAlign="start start">
-        <mat-list>
-            <mat-list-item>BBT 2</mat-list-item>
-            <mat-list-item>Warm Up</mat-list-item>
-            <mat-list-item>Stretch</mat-list-item>
-            <mat-list-item>Kicks</mat-list-item>
-            <mat-list-item>Strikes</mat-list-item>
-            <mat-list-item>Blocks</mat-list-item>
-            <mat-list-item>Combos</mat-list-item>
-            <mat-list-item>Form</mat-list-item>
-        </mat-list>
-        <mat-list *ngFor="let lesson of bbt2">
-            <mat-list-item><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></mat-list-item>
-            <mat-list-item>{{ lesson.warmUp }}</mat-list-item>
-            <mat-list-item>{{ lesson.stretch }}</mat-list-item>
-            <mat-list-item>{{ lesson.kicks }}</mat-list-item>
-            <mat-list-item>{{ lesson.strikes }}</mat-list-item>
-            <mat-list-item>{{ lesson.blocks }}</mat-list-item>
-            <mat-list-item>{{ lesson.combos }}</mat-list-item>
-            <mat-list-item>{{ lesson.form }}</mat-list-item>
-        </mat-list>
+        <ul class="bbt2">
+            <li class="header">BBT 2</li>
+            <li>Warm Up</li>
+            <li>Stretch</li>
+            <li>Kicks</li>
+            <li>Strikes</li>
+            <li>Blocks</li>
+            <li>Combos</li>
+            <li>Form</li>
+        </ul>
+        <ul class="bbt2" *ngFor="let lesson of bbt2">
+            <li class="header"><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></li>
+            <li>{{ lesson.warmUp }}</li>
+            <li>{{ lesson.stretch }}</li>
+            <li>{{ lesson.kicks }}</li>
+            <li>{{ lesson.strikes }}</li>
+            <li>{{ lesson.blocks }}</li>
+            <li>{{ lesson.combos }}</li>
+            <li>{{ lesson.form }}</li>
+        </ul>
     </div>
 </div>
 <div fxLayout="column" fxLayoutAlign="space-between">
     <div fxLayout="row" fxLayoutAlign="start start">
-        <mat-list>
-            <mat-list-item>BBT 3</mat-list-item>
-            <mat-list-item>Warm Up</mat-list-item>
-            <mat-list-item>Stretch</mat-list-item>
-            <mat-list-item>Kicks</mat-list-item>
-            <mat-list-item>Strikes</mat-list-item>
-            <mat-list-item>Blocks</mat-list-item>
-            <mat-list-item>Combos</mat-list-item>
-            <mat-list-item>Form</mat-list-item>
-        </mat-list>
-        <mat-list *ngFor="let lesson of bbt3">
-            <mat-list-item><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></mat-list-item>
-            <mat-list-item>{{ lesson.warmUp }}</mat-list-item>
-            <mat-list-item>{{ lesson.stretch }}</mat-list-item>
-            <mat-list-item>{{ lesson.kicks }}</mat-list-item>
-            <mat-list-item>{{ lesson.strikes }}</mat-list-item>
-            <mat-list-item>{{ lesson.blocks }}</mat-list-item>
-            <mat-list-item>{{ lesson.combos }}</mat-list-item>
-            <mat-list-item>{{ lesson.form }}</mat-list-item>
-        </mat-list>
+        <ul class="bbt3">
+            <li class="header">BBT 3</li>
+            <li>Warm Up</li>
+            <li>Stretch</li>
+            <li>Kicks</li>
+            <li>Strikes</li>
+            <li>Blocks</li>
+            <li>Combos</li>
+            <li>Form</li>
+        </ul>
+        <ul class="bbt3" *ngFor="let lesson of bbt3">
+            <li class="header"><a [routerLink]="['/', lesson._id]">{{ lesson.sessionNumber }}</a></li>
+            <li>{{ lesson.warmUp }}</li>
+            <li>{{ lesson.stretch }}</li>
+            <li>{{ lesson.kicks }}</li>
+            <li>{{ lesson.strikes }}</li>
+            <li>{{ lesson.blocks }}</li>
+            <li>{{ lesson.combos }}</li>
+            <li>{{ lesson.form }}</li>
+        </ul>
     </div>
 </div>

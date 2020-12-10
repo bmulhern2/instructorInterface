@@ -1,7 +1,4 @@
 <mat-card>
-    <mat-card-title>
-        <h3>Create Lesson</h3>
-    </mat-card-title>
     <mat-card-content>
         <form [formGroup]="adminForm" (ngSubmit)="submit()">
             <mat-card-content>
@@ -12,7 +9,9 @@
                 </mat-select>
             </mat-card-content>
             <mat-card-content>
-                <input type="Number" placeholder="Session Number" formControlName="sessionNumber">
+                <mat-label>Session Number</mat-label>
+                <br>
+                <input type="text" placeholder="Session Number" formControlName="sessionNumber">
             </mat-card-content>
             <mat-card-content>
                 <mat-label>Warm Up</mat-label>

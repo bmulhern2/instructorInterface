@@ -8,6 +8,7 @@ Admin Actions
 Reference
 Stack: https://stackoverflow.com/questions/38062702/how-to-pass-a-parameter-to-routerlink-that-is-somewhere-inside-the-url
 Medium: https://medium.com/better-programming/angular-6-url-parameters-860db789db85
+StackOverFlow: https://stackoverflow.com/questions/59294597/including-an-href-in-mat-list-item-not-working
 
 */
 import { Component, OnInit } from '@angular/core';
@@ -26,7 +27,7 @@ export class InstructorComponent implements OnInit {
   bbt1: lesson[]
   bbt2: lesson[]
   bbt3: lesson[]
-  constructor(private service: ServiceService) { }
+  constructor(private router: Router, private service: ServiceService) { }
   ngOnInit() {
   // Get Basic
   this.service.getByLevel("Basic").subscribe(lessons => {
