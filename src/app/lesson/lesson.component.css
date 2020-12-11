@@ -5,6 +5,7 @@ mat-list {
     margin: 0;
     padding: 0;
 } mat-card {
+    margin-top: 25%;
     text-align: center;
 } img {
     height: 15%;
@@ -13,4 +14,7 @@ mat-list {
     margin-top: 20%;
 } mat-card-title {
     margin-right: 25%;
+} ul {
+    text-align: center;
+    list-style-type: none;
 }
