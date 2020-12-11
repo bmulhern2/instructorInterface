@@ -13,4 +13,6 @@
     margin-top: 20%;
 } #link {
     margin-right: 25%;
+} mat-card-content {
+    margin-top: -2%;
 }
