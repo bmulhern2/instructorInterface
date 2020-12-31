@@ -15,6 +15,11 @@ mat-list {
 } mat-card-title {
     margin-right: 25%;
 } ul {
+    margin-top: 10%;
     text-align: center;
     list-style-type: none;
+} mat-tab-group {
+    text-align: center;
+} ul {
+    list-style-type: none !important;
 }

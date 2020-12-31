@@ -1,14 +1,13 @@
-<cng-tabs *ngFor="let week of weeks; let i = index;">
-    <cng-tab #i>{{ week.weekNumber }}</cng-tab>
-</cng-tabs>
-<div *ngFor="let week of weeks; let i = index;">
-<ul [cngTabContentOf]="i">
-    <li>{{ week.warmUpDescription }}</li>
-    <li>{{ week.stretchDescription }}</li>
-    <li>{{ week.kicksDescription }}</li>
-    <li>{{ week.strikesDescription }}</li>
-    <li>{{ week.blocksDescription }}</li>
-    <li>{{ week.combosDescription }}</li>
-    <li>{{ week.formDescription }}</li>
-</ul>
-</div>
+<mat-tab-group mat-align-tabs="center">
+        <ul *ngFor="let week of weeks; let i = index;">
+            <mat-tab label="{{ week.weekNumber }}">
+                <li>{{ week.warmUpDescription }}</li>
+                <li>{{ week.stretchDescription }}</li>
+                <li>{{ week.kicksDescription }}</li>
+                <li>{{ week.strikesDescription }}</li>
+                <li>{{ week.blocksDescription }}</li>
+                <li>{{ week.combosDescription }}</li>
+                <li>{{ week.formDescription }}</li>
+            </mat-tab>
+        </ul>
+</mat-tab-group>

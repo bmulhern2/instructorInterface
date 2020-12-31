@@ -27,6 +27,8 @@ import { CngTabsModule } from '@codehint-ng/tabs';
 import { AddWeeksComponent } from './add-weeks/add-weeks.component'
 
 import { MatDialogModule } from '@angular/material/dialog'
+
+import { MatTabsModule } from '@angular/material/tabs'
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,8 @@ import { MatDialogModule } from '@angular/material/dialog'
     FlexLayoutModule,
     MatSelectModule,
     CngTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

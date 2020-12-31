@@ -46,5 +46,6 @@ export class AddWeeksComponent implements OnInit {
           console.log("GREAT SUCCESS")
         }
       })
+      this.weekForm.reset()
     }
 }
