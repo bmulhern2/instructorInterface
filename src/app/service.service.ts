@@ -33,7 +33,7 @@ export class ServiceService {
     return this.http.delete<lesson>('/api/delete/' + id)
   }
   postWeek(data, level, sessionNumber): Observable<week> {
-    return this.http.post<week>('/api/post/week/' + level + '/' + sessionNumber , data)
+    return this.http.post<week>('/api/post/week/' + level + '/' + sessionNumber, data)
   }
   getWeeks(): Observable<week[]> {
     return this.http.get<week[]>('/api/get/weeks')

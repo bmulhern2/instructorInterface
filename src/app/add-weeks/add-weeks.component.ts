@@ -41,9 +41,9 @@ export class AddWeeksComponent implements OnInit {
       }
       this.service.postWeek(week, level, sessionNumber).subscribe(err => {
         if (err) {
-          console.log(err)
+          alert(err)
         } else {
-          console.log("GREAT SUCCESS")
+          alert("GREAT SUCCESS")
         }
       })
       this.weekForm.reset()

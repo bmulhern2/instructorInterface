@@ -1,7 +1,7 @@
 <mat-tab-group mat-align-tabs="center">
         <ul *ngFor="let week of weeks; let i = index;">
             <mat-tab label="{{ week.weekNumber }}">
-                <li>{{ week.warmUpDescription }}</li>
+                <li>{{ week.warmUpDescription }}<button mat-button (click)=`nav(${week.level}, ${week.sessionNumber}, ${week.weekNumber})`>Upload</button></li>
                 <li>{{ week.stretchDescription }}</li>
                 <li>{{ week.kicksDescription }}</li>
                 <li>{{ week.strikesDescription }}</li>

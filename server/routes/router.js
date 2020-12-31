@@ -5,6 +5,19 @@
 // Defines Dependencies
 let express = require('express')
 let bodyParser = require('body-parser')
+let multer = require('multer')
+
+// Multer Storage
+let storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './uploads')
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.originalname.split(" ").join(""))
+    }
+})
+
+let upload = multer({ storage: storage })
 
 // Defines Router
 let router = express.Router()
@@ -116,7 +129,10 @@ router.post('/post/week/:level/:sessionNumber', function(req, res) {
     })
 })
 
-// Weeks Get
+// Video Post
+router.post('/video/:level/:sessionName/:variable', upload.single('video'), function(req, res) {
+    console.log(req.files.path)
+})
 
 // Exports router
 module.exports = router

@@ -3,6 +3,7 @@ import { ServiceService } from '../service.service'
 import { lesson } from '../lesson.interface'
 import { ActivatedRoute } from '@angular/router'
 import { week } from '../week.interface'
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-lesson',
   templateUrl: './lesson.component.html',
@@ -10,7 +11,7 @@ import { week } from '../week.interface'
 })
 export class LessonComponent implements OnInit {
   weeks: week[]
-  constructor(private route: ActivatedRoute, private serviceService: ServiceService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private serviceService: ServiceService) { }
 
   ngOnInit() { 
     let id = this.route.snapshot.paramMap.get("id")
@@ -20,5 +21,4 @@ export class LessonComponent implements OnInit {
     console.log(this.weeks) 
     })
   }
-
 }

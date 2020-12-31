@@ -28,14 +28,17 @@ import { AddWeeksComponent } from './add-weeks/add-weeks.component'
 
 import { MatDialogModule } from '@angular/material/dialog'
 
-import { MatTabsModule } from '@angular/material/tabs'
+import { MatTabsModule } from '@angular/material/tabs';
+import { UploadComponent } from './upload/upload.component'
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     InstructorComponent,
     LessonComponent,
-    AddWeeksComponent
+    AddWeeksComponent,
+    VideoComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
