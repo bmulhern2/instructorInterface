@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-title>
+        <h1>Add A Week's Lesson</h1>
+    </mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="weekForm" (ngSubmit)="submit()">
+            <p>
+                <input type="text" placeholder="Level" formControlName="level" />
+            </p>
+            <p>
+                <input type="text" placeholder="Session Number" formControlName="sessionNumber" />
+            </p>
+            <p>
+                <input type="text" placeholder="Week Number" formControlName="weekNumber" />
+            </p>
+            <p>
+                <input type="text" placeholder="Warm Up Description" formControlName="warmUpDescription" />
+            </p>
+            <p>
+                <input type="text" placeholder="Stretch Description" formControlName="stretchDescription" />
+            </p>
+            <p>
+                <input type="text" placeholder="Kicks Description" formControlName="kicksDescription" />
+            </p>
+            <p>
+                <input tpe="text" placeholder="Strikes Description" formControlName="strikesDescription" />
+            </p>
+            <p>
+                <input type="text" placeholder="Blocks Description" formControlName="blocksDescription" />
+            </p>
+            <p>
+                <input type="text" placeholder="Combos Description" formControlName="combosDescription" /> 
+            </p>
+            <p>
+                <input type="text" placeholder="Form Description" formControlName="formDescription" />
+            </p>
+            <mat-card-actions>
+                <button type="submit">Add The Week's Lesson</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

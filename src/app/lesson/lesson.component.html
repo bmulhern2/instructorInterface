@@ -1,15 +1,14 @@
-<mat-card>
-    <mat-card-content>
- <ul>
- <li>Lesson</li>   
- <li>Level: {{ lesson.level }}</li> 
- <li>Warm Up: {{ lesson.warmUpDescription }}</li>
- <li>Stretch: {{ lesson.stretchDescription }}</li>
- <li>Kicks: {{ lesson.kicksDescription }}</li>
- <li>Strikes: {{ lesson.strikesDescription }}</li>
- <li>Blocks: {{ lesson.blocksDescription }}</li>
- <li>Combos: {{ lesson.combosDescription }}</li>
- <li>Form: {{ lesson.formDescription }}</li>
- </ul>
-</mat-card-content>
-</mat-card>
+<cng-tabs *ngFor="let week of weeks; let i = index;">
+    <cng-tab #i>{{ week.weekNumber }}</cng-tab>
+</cng-tabs>
+<div *ngFor="let week of weeks; let i = index;">
+<ul [cngTabContentOf]="i">
+    <li>{{ week.warmUpDescription }}</li>
+    <li>{{ week.stretchDescription }}</li>
+    <li>{{ week.kicksDescription }}</li>
+    <li>{{ week.strikesDescription }}</li>
+    <li>{{ week.blocksDescription }}</li>
+    <li>{{ week.combosDescription }}</li>
+    <li>{{ week.formDescription }}</li>
+</ul>
+</div>

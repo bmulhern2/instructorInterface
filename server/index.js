@@ -23,6 +23,6 @@ app.use(express.static(path.join(__dirname, '../dist/instructorInterface')))
 app.use('/', express.static(path.join(__dirname, '../dist/instructorInterface')))
 
 // Creates a server running on port 8080
-http.createServer(app).listen('8080', function() {
-    console.log("Server Started On Port 8080")
+http.createServer(app).listen('8000', function() {
+    console.log("Server Started On Port 8000")
 })

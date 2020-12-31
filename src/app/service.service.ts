@@ -4,6 +4,7 @@ import { lesson } from '../app/lesson.interface';
 import { Observable } from 'rxjs'
 import { CookieService }  from 'ngx-cookie-service'
 import { level } from './level.interface'
+import { week } from './week.interface'
 @Injectable({
   providedIn: 'root'
 })
@@ -30,5 +31,11 @@ export class ServiceService {
   }
   deleteOne(id): Observable<lesson> {
     return this.http.delete<lesson>('/api/delete/' + id)
+  }
+  postWeek(data, level, sessionNumber): Observable<week> {
+    return this.http.post<week>('/api/post/week/' + level + '/' + sessionNumber , data)
+  }
+  getWeeks(): Observable<week[]> {
+    return this.http.get<week[]>('/api/get/weeks')
   }
 }

@@ -22,12 +22,18 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 import { CookieService } from 'ngx-cookie-service'
 
 import { MatSelectModule } from '@angular/material/select'
+
+import { CngTabsModule } from '@codehint-ng/tabs';
+import { AddWeeksComponent } from './add-weeks/add-weeks.component'
+
+import { MatDialogModule } from '@angular/material/dialog'
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     InstructorComponent,
-    LessonComponent
+    LessonComponent,
+    AddWeeksComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import { MatSelectModule } from '@angular/material/select'
     HttpClientModule,
     MatListModule,
     FlexLayoutModule,
-    MatSelectModule
+    MatSelectModule,
+    CngTabsModule,
+    MatDialogModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

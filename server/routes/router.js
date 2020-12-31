@@ -14,6 +14,7 @@ let Lesson = require('../models/lesson')
 
 // Imports Level
 let levels = require('../models/level')
+const { aggregate } = require('../models/lesson')
 
 // Body Parser Middleware
 router.use(bodyParser.json())
@@ -96,6 +97,26 @@ router.delete('/delete/:id', function(req, res) {
         }
     })
 })
+
+// Weeks Post
+router.post('/post/week/:level/:sessionNumber', function(req, res) {
+    Lesson.findOne({ "level": req.params.level}, function(err, level) {
+        if (err) {
+            res.json(err)
+        } else {
+            level['weeks'].push(req.body)
+            level.save(req.body, function(err, response) {
+                if (err) {
+                    res.json(err)
+                } else {
+                    res.json(response)
+                }
+            })
+        }
+    })
+})
+
+// Weeks Get
 
 // Exports router
 module.exports = router

@@ -1,26 +1,24 @@
 // Requires Dependencies
 let mongoose = require('mongoose')
 
+// Import Weeks Schema
+let WeekSchema = require('./weeks')
+
 // Defines Schema
 let Schema = mongoose.Schema
 
 // Defines Lesson Schema
 let LessonSchema = new Schema({
     level: String,
+    sessionNumber: String,
     warmUp: String,
-    warmUpDescription: String,
     stretch: String,
-    stretchDescription: String,
     kicks: String,
-    kicksDescription: String,
     strikes: String,
-    strikesDescription: String,
     blocks: String,
-    blocksDescription: String,
     combos: String,
-    combosDescription: String,
     form: String,
-    formDescription: String
+    weeks: [WeekSchema]
 })
 
 // Models data
