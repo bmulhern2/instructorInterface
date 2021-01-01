@@ -37,7 +37,6 @@ import { UploadComponent } from './upload/upload.component'
     InstructorComponent,
     LessonComponent,
     AddWeeksComponent,
-    VideoComponent,
     UploadComponent
   ],
   imports: [

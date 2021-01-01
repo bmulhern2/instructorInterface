@@ -25,9 +25,11 @@ let router = express.Router()
 // Imports Lesson Model
 let Lesson = require('../models/lesson')
 
+// Import Film Model
+let Films = require('../models/films')
+
 // Imports Level
 let levels = require('../models/level')
-const { aggregate } = require('../models/lesson')
 
 // Body Parser Middleware
 router.use(bodyParser.json())
@@ -130,8 +132,19 @@ router.post('/post/week/:level/:sessionNumber', function(req, res) {
 })
 
 // Video Post
-router.post('/video/:level/:sessionName/:variable', upload.single('video'), function(req, res) {
-    console.log(req.files.path)
+router.post('/upload', upload.single('video'), function(req, res) {
+    Films.create({ "videoUrl": req.file.path })
+})
+
+// Video GET
+router.get('/download', function(req, res) {
+    Films.find({}, function(err, films) {
+        if (err) {
+            res.json(err)
+        } else {
+            res.json(films)
+        }
+    })
 })
 
 // Exports router

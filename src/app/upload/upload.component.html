@@ -1,2 +1,5 @@
 <input matInput type="file" placeholder="Video" id="Video" />
 <button type="button" (click)="upload()">Upload</button>
+<div *ngFor="let video of videos">
+    <video src="{{ video.videoUrl }}"></video>
+</div>

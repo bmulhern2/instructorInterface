@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service'
-import { lesson } from '../lesson.interface'
 import { ActivatedRoute } from '@angular/router'
 import { week } from '../week.interface'
-import { Router } from '@angular/router'
 @Component({
   selector: 'app-lesson',
   templateUrl: './lesson.component.html',
@@ -11,7 +9,7 @@ import { Router } from '@angular/router'
 })
 export class LessonComponent implements OnInit {
   weeks: week[]
-  constructor(private router: Router, private route: ActivatedRoute, private serviceService: ServiceService) { }
+  constructor(private route: ActivatedRoute, private serviceService: ServiceService) { }
 
   ngOnInit() { 
     let id = this.route.snapshot.paramMap.get("id")

@@ -21,6 +21,7 @@ app.use('/api', apiRouter)
 // Uses the dist folder of the front-end
 app.use(express.static(path.join(__dirname, '../dist/instructorInterface')))
 app.use('/', express.static(path.join(__dirname, '../dist/instructorInterface')))
+app.use('/uploads', express.static(path.join(__dirname, './uploads')))
 
 // Creates a server running on port 8080
 http.createServer(app).listen('8000', function() {

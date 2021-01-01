@@ -5,6 +5,7 @@ import { Router } from '@angular/router'
 import { level } from '../level.interface'
 import { MatDialog } from '@angular/material/dialog'
 import { AddWeeksComponent } from '../add-weeks/add-weeks.component'
+import { UploadComponent } from '../upload/upload.component';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -57,5 +58,8 @@ export class AdminComponent implements OnInit {
   }
   openDialog() {
     this.dialog.open(AddWeeksComponent)
+  }
+  upload() {
+    this.dialog.open(UploadComponent)
   }
 }
