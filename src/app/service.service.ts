@@ -38,4 +38,7 @@ export class ServiceService {
   getWeeks(): Observable<week[]> {
     return this.http.get<week[]>('/api/get/weeks')
   }
+  getIndividualWeek(level, sessionNumber, weekId): Observable<week> {
+    return this.http.get<week>('/api/week/' + level + '/' + sessionNumber + '/' + weekId)
+  }
 }

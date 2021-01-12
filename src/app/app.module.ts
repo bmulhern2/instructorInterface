@@ -29,7 +29,8 @@ import { AddWeeksComponent } from './add-weeks/add-weeks.component'
 import { MatDialogModule } from '@angular/material/dialog'
 
 import { MatTabsModule } from '@angular/material/tabs';
-import { UploadComponent } from './upload/upload.component'
+import { UploadComponent } from './upload/upload.component';
+import { WeekComponent } from './week/week.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { UploadComponent } from './upload/upload.component'
     InstructorComponent,
     LessonComponent,
     AddWeeksComponent,
-    UploadComponent
+    UploadComponent,
+    WeekComponent
   ],
   imports: [
     BrowserModule,

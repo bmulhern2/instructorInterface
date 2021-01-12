@@ -1,6 +1,7 @@
 <mat-tab-group mat-align-tabs="center">
-        <ul *ngFor="let week of weeks; let i = index;">
+        <ul *ngFor="let res; let week of weeks; let i = index;">
             <mat-tab label="Week {{ week.weekNumber }}">
+                <a [routerLink]="['/week', lesson.level, lesson.sessionNumber, week._id, week.weekNumber]">Go to week view</a>
                 <li>{{ week.warmUpDescription }}</li>
                 <li>{{ week.stretchDescription }}</li>
                 <li>{{ week.kicksDescription }}</li>

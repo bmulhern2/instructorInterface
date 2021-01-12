@@ -31,6 +31,7 @@ let Films = require('../models/films')
 // Imports Level
 let levels = require('../models/level')
 
+
 // Body Parser Middleware
 router.use(bodyParser.json())
 router.use(bodyParser.urlencoded({ extended: true }))
@@ -42,6 +43,15 @@ router.get('/', function(req, res) {
             res.json(err)
         } else {
             res.json(lesson)
+        }
+    })
+})
+router.get('/week/:level/:sessionNumber/:weekId', function(req, res) {
+    Lesson.findOne({ "level": req.params.level }, function(err, sessions) {
+        if (err) {
+            res.json(err)
+        } else {
+           res.json(sessions)
         }
     })
 })
@@ -76,6 +86,9 @@ router.get('/:id', function(req, res) {
         }
     })
 })
+
+// Get individul week
+router.get('/week/')
 
 // Post to Lessons Route
 router.post('/create', function(req, res) {
