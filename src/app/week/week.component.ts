@@ -12,12 +12,14 @@ import { week } from '../week.interface';
 export class WeekComponent implements OnInit {
   weeks: week[]
   indivudual: week
+  level: string
+  sessionNumber: string
   constructor(private service: ServiceService, private route: ActivatedRoute, private http: HttpClient) { }
   ngOnInit() { 
     let weekId = this.route.snapshot.paramMap.get("weekId")
-    let level = this.route.snapshot.paramMap.get('level')
-    let sessionNumber = this.route.snapshot.paramMap.get('sessionNumber')
-    this.service.getIndividualWeek(level, sessionNumber, weekId).subscribe(res => {
+    this.level = this.route.snapshot.paramMap.get('level')
+    this.sessionNumber = this.route.snapshot.paramMap.get('sessionNumber')
+    this.service.getIndividualWeek(this.level, this.sessionNumber, weekId).subscribe(res => {
       this.weeks = res['weeks']
       for (let i=0; i <this.weeks.length; i++) {
         if (this.weeks[i]['_id'] === weekId) {

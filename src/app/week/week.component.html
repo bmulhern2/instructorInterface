@@ -1,7 +1,18 @@
-<h1>Week {{ indivudual.weekNumber }}</h1>
-<h2>{{ indivudual.combosDescription }}</h2>
-<h2>{{ indivudual.formDescription }}</h2>
-<h2>{{ indivudual.kicksDescription }}</h2>
-<h2>{{ indivudual.stretchDescription }}</h2>
-<h2>{{ indivudual.strikesDescription }}</h2>
-<h2>{{ indivudual.warmUpDescription }}</h2>
+<nav>
+    <h1 style="text-align: left; margin-top: -5px;">Lesson Plan</h1>
+    <br>
+    <h2 style="text-align: left; margin-top: -40px;">Class: {{ level }}</h2>
+    <br>
+    <h2 style="text-align: left; margin-top: -40px;">Personal Week: {{ indivudual.weekNumber }}</h2>
+</nav>
+<div id="info">
+<h2>Warm Up: {{ indivudual.warmUpDescription }}</h2>
+<h2>Stretch:  {{ indivudual.stretchDescription }}</h2>
+<h2>*Take Attendence*</h2>
+<h2>Strikes:  {{ indivudual.strikesDescription }}</h2>
+<h2>Kicks:  {{ indivudual.kicksDescription }}</h2>
+<h2>Blocks: {{ indivudual.blocksDescription }}</h2>
+<h2>* 3 Rule Review *</h2>
+<h2>Form:  {{ indivudual.formDescription }}</h2>
+<h2>Combos:  {{ indivudual.combosDescription }}</h2>
+</div>
